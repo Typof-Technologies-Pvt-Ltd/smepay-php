@@ -30,8 +30,8 @@ final class SMEPay
     /** @var 'test'|'live' */
     private readonly string $environment;
 
-    /** @phpstan-ignore property.onlyWritten */
-    private readonly ApiClient $api;
+    /** Payment calls: create → initiate → getStatus. */
+    public readonly Payment $payment;
 
     /**
      * @param array<string, mixed> $config "client_id", "client_secret", optional "environment" ("test" | "live")
@@ -61,7 +61,9 @@ final class SMEPay
         }
 
         $this->environment = $environment;
-        $this->api = new ApiClient(self::BASE_URLS[$environment], trim($clientId), trim($clientSecret));
+        $this->payment = new Payment(
+            new ApiClient(self::BASE_URLS[$environment], trim($clientId), trim($clientSecret)),
+        );
     }
 
     /**
