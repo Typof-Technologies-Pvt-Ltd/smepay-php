@@ -1,0 +1,5 @@
+# Keep dev-only files out of the package that Composer downloads.
+/.gitattributes export-ignore
+/.gitignore export-ignore
+/.php-cs-fixer.dist.php export-ignore
+/phpstan.neon.dist export-ignore
