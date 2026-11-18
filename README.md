@@ -98,7 +98,7 @@ Use the SDK only on your server. Keep `client_secret` in an environment variable
 
 ## Example
 
-[`examples/full_flow.php`](https://github.com/mahi-qwe/smepay-php/blob/main/examples/full_flow.php): put `SMEPAY_CLIENT_ID` / `SMEPAY_CLIENT_SECRET` in `.env`, run `composer install`, then `set -a; source .env; set +a; php examples/full_flow.php`.
+[`examples/full_flow.php`](https://github.com/Typof-Technologies-Pvt-Ltd/smepay-php/blob/main/examples/full_flow.php): put `SMEPAY_CLIENT_ID` / `SMEPAY_CLIENT_SECRET` in `.env`, run `composer install`, then `set -a; source .env; set +a; php examples/full_flow.php`.
 
 ## License
 
